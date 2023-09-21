@@ -170,15 +170,15 @@ class VL53L5CX:
             bus_id: int = 1,
             use_raw_format: bool = False,
             nb_target_per_zone: int = 1,
-            disable_ambient_per_spad: bool = False,
-            disable_nb_spads_enabled: bool = False,
-            disable_nb_target_detected: bool = False,
-            disable_signal_per_spad: bool = False,
-            disable_range_sigma_mm: bool = False,
+            disable_ambient_per_spad: bool = True,
+            disable_nb_spads_enabled: bool = True,
+            disable_nb_target_detected: bool = True,
+            disable_signal_per_spad: bool = True,
+            disable_range_sigma_mm: bool = True,
             disable_distance_mm: bool = False,
-            disable_reflectance_percent: bool = False,
-            disable_target_status: bool = False,
-            disable_motion_indicator: bool = False) -> None:
+            disable_reflectance_percent: bool = True,
+            disable_target_status: bool = True,
+            disable_motion_indicator: bool = True) -> None:
 
         self.buffers = Buffers(nb_target_per_zone)
         self.use_raw_format = use_raw_format
